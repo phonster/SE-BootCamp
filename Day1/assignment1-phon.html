@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simplified Project Development</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #hero{
+            background-image: url("img/typist.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 50vh;
+            min-height: 200px;
+        }
+        #navi{
+            width: 100%;
+            display: inline-flex;
+            justify-content: space-between;
+        }
+        section{
+            padding-left: 30px;
+            padding-top: 10px;
+            padding-right: 30px;
+            padding-bottom: 30px;
+        }
+        nav{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: .75em;
+            text-transform: uppercase;
+            color: rgb(212, 212, 212);
+            font-weight:700
+        }
+        .mini-cap-title{
+            text-transform: uppercase;
+            font-size: .7em;
+            color: rgb(212, 212, 212);
+            font-weight: 700;
+        }
+        .hero-text{
+            height: 100%; 
+            width: 35%; 
+            color: white; 
+            padding-top: 12vh;
+            padding-left: 30px;
+        }
+        .info-box{
+            background-color: rgb(255,255,255);
+            padding: 10px;
+            text-align: center;
+        }
+        /*
+        .info-box.first{
+            width: 32%;
+            float: left;
+            margin-right: 10px;
+        }
+        .info-box.middle{
+            width: 33%;
+            overflow: hidden;
+        }
+        .info-box.last{
+            width: 32%;
+            float: right;
+            margin-left: 10px;
+        }
+        */
+        .info-box a{
+            text-decoration: none;
+            border-bottom: 1px dotted;
+        }
+        .info-box h6{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        @media screen and (max-width: 768px){
+            .info-box{
+                width: 100%;
+            }
+            .info-box > .col3-content{
+                font-size: .9em;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+            .row{
+                flex-direction: column;
+            }
+            .row > div{
+                flex: 1 0 100%;
+            }
+        }
+        .col3-content{
+            padding-top: 5px;
+            font-size: .8em;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .row{
+            background-color: #cecece;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .row > div{
+            flex: 1 0 calc(33.33% - 20px);
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section id="hero" aria-label="hands typing on an old style typewriter" title="hands typing on an old style typewriter">
+        <nav id="navi">
+            Studio
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+        </nav>
+        <div class="hero-text">
+            <p class="mini-cap-title">
+                We work hard. We play hard
+            </p>
+            <h1>
+                We&nbsp;Create<br>Elegant&nbsp;Solutions
+            </h1>
+        </div>
+    </section>
+    <!--<section class="row" style="background-color: #cecece; display: inline-block; justify-content: space-around; align-content:center">-->
+    <section class="row">
+        <div class="info-box">
+            <img src="img//solar-panels1.jpg" width="100%" alt="solar panels on a deck" />
+            <h6>Residential Solutions</h6>
+                <p class="col3-content">Save on electricity bill, reduce your carbon footprint and increase the value of your home</p>
+                <p><a href="#">MORE</a></p>
+        </div>
+        <div class="info-box">
+            <img src="img//solar-panels2.jpg" width="100%" alt="solar panels on cabin" />
+            <h6>Utility-Scale Solutions</h6>
+                <p class="col3-content">Save even more on bill, reduce lots of your carbon footprint and maybe increase the value of your home</p>
+                <p><a href="#">MORE</a></p>
+        </div>
+        <div class="info-box">
+            <img src="img//solar-panels3.jpg" width="100%" alt="solar panel on blue house" />
+            <h6>Commercial Solutions</h6>
+                <p class="col3-content">Electricity savings on your bill, carbon footprint reduces to EU42.5 and value of your home will break through roof</p>
+                <p><a href="#">MORE</a></p>
+        </div>
+    </section>
+</body>
+</html>
