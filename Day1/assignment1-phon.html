@@ -24,18 +24,18 @@
             display: inline-flex;
             justify-content: space-between;
         }
-        section{
-            padding-left: 30px;
-            padding-top: 10px;
-            padding-right: 30px;
-            padding-bottom: 30px;
-        }
         nav{
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             font-size: .75em;
             text-transform: uppercase;
             color: rgb(212, 212, 212);
             font-weight:700
+        }
+        section{
+            padding-left: 30px;
+            padding-top: 10px;
+            padding-right: 30px;
+            padding-bottom: 30px;
         }
         .mini-cap-title{
             text-transform: uppercase;
@@ -55,22 +55,6 @@
             padding: 10px;
             text-align: center;
         }
-        /*
-        .info-box.first{
-            width: 32%;
-            float: left;
-            margin-right: 10px;
-        }
-        .info-box.middle{
-            width: 33%;
-            overflow: hidden;
-        }
-        .info-box.last{
-            width: 32%;
-            float: right;
-            margin-left: 10px;
-        }
-        */
         .info-box a{
             text-decoration: none;
             border-bottom: 1px dotted;
@@ -78,6 +62,24 @@
         .info-box h6{
             padding-top: 10px;
             padding-bottom: 10px;
+        }
+        .info-box img{
+            width: 100%;
+        }
+        .col3-content{
+            padding-top: 5px;
+            font-size: .8em;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .row{
+            background-color: #cecece;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .row > div{
+            flex: 1 0 calc(33.33% - 20px);
+            margin: 10px;
         }
         @media screen and (max-width: 768px){
             .info-box{
@@ -94,21 +96,6 @@
             .row > div{
                 flex: 1 0 100%;
             }
-        }
-        .col3-content{
-            padding-top: 5px;
-            font-size: .8em;
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-        .row{
-            background-color: #cecece;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .row > div{
-            flex: 1 0 calc(33.33% - 20px);
-            margin: 10px;
         }
     </style>
 </head>
@@ -127,22 +114,21 @@
             </h1>
         </div>
     </section>
-    <!--<section class="row" style="background-color: #cecece; display: inline-block; justify-content: space-around; align-content:center">-->
     <section class="row">
         <div class="info-box">
-            <img src="img//solar-panels1.jpg" width="100%" alt="solar panels on a deck" />
+            <img src="img//solar-panels1.jpg" alt="solar panels on a deck">
             <h6>Residential Solutions</h6>
                 <p class="col3-content">Save on electricity bill, reduce your carbon footprint and increase the value of your home</p>
                 <p><a href="#">MORE</a></p>
         </div>
         <div class="info-box">
-            <img src="img//solar-panels2.jpg" width="100%" alt="solar panels on cabin" />
+            <img src="img//solar-panels2.jpg" alt="solar panels on cabin">
             <h6>Utility-Scale Solutions</h6>
                 <p class="col3-content">Save even more on bill, reduce lots of your carbon footprint and maybe increase the value of your home</p>
                 <p><a href="#">MORE</a></p>
         </div>
         <div class="info-box">
-            <img src="img//solar-panels3.jpg" width="100%" alt="solar panel on blue house" />
+            <img src="img//solar-panels3.jpg" alt="solar panel on blue house">
             <h6>Commercial Solutions</h6>
                 <p class="col3-content">Electricity savings on your bill, carbon footprint reduces to EU42.5 and value of your home will break through roof</p>
                 <p><a href="#">MORE</a></p>
