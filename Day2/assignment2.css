@@ -3,10 +3,9 @@ body{
 }
 #header{
     margin: auto;
-    border: 1px solid rgb(55, 0, 255);
     text-align: center;
+    padding: 4em;
 }
-h1{margin: auto;}
 .grid-2-nogap {
     column-gap: 0;
 }
