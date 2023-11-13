@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simplified Project Development</title>
+    <title>Simplified Project1 Development</title>
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="loginform.css">
@@ -102,15 +102,15 @@
             </div>
             <div class="grid-orderform">
                 <div class="grid-img" style="border: 0px solid red;">
-                    <img id="product-image" class="cart-size" src="img/solar-panels1.jpg" alt="solar panels on a deck">
+                    <img id="product-img" class="cart-size" src="img/solar-panels1.jpg" alt="solar panels on a deck">
                 </div>
-                <div class="grid-detail" style="border: 0px solid red; padding: .5em;">
+                <div class="grid-detail" style="padding: .5em;">
                     <h6 id="product-name">Residential Solutions</h6>
                     <p id="product-desc" class="col3-content">
                         Save on electricity bill, reduce your carbon footprint and increase the value of
                         your home
                     </p>
-                    <span id="product-price">$222222</span>
+                    <span style="padding: .5em;" id="product-price">$222222</span>
                 </div>
                 <div class="grid-cart">
                     <div class="grid-cart-controls">
@@ -126,14 +126,17 @@
                             <span class="input-group-text" id="inputGroup-sizing-sm" style="color: white; background-color: transparent;">Total</span>
                             <input id="product-total" style="color: white; background-color: transparent;" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                         </div>
-                        <div class="grid-addtocart"><button class="btn btn-sm btn-outline-secondary" style="color: white; float: right;">Add</button></div>
-                        <!--
-                        <div style="border: 1px solid red;" class="grid-total">dsfgh</div>
-                        <div style="border: 1px solid red;" class="grid-addtocart">asdfasd</div>
-                        <div style="border: 1px solid red;" class="grid-addtocart"><button>add</button></div>
-                        -->
+                        <div class="grid-addtocart">
+                            <button id="product-add" class="btn btn-sm btn-outline-secondary" style="color: white; float: right;">
+                                Add to Cart
+                            </button>
+                        </div>
                     </div>
                 </div>
+                <div class="grid-summary">
+                    <p id="order-summary">&nbsp;</p>
+                </div>
+                <div class="grid-foot fill-space">&copy;2023 QBCC SE MicroCert</div>
             </div>
         </div>
     </div>
@@ -143,10 +146,16 @@
             currency: 'USD'
         });
         const productList = {
-            "residential": {"name": "Residential Solar", "desc":"Save on electricity bill, reduce your carbon footprint and increase the value of your home", "price":500999, "img":"img\solar-panels1.jpg"},
-            "utility": {"name": "Utility Solar", "desc":"Save even more on bill, reduce lots of your carbon footprint and maybe increase the value of your home", "price":75350, "img":"img\solar-panels2.jpg"},
-            "commercial": {"name": "Commercial Solar", "desc":"Electricity savings on your bill, carbon footprint reduces to EU42.5 and value of your home will break through roof", "price":1500595, "img":"img\solar-panels3.jpg"}
+            "residential": {"name": "Residential Solar", "desc":"For the individual who wants to save on their electricity bill, reduce your carbon footprint and increase the value of your home", "price":500999, "img":"img/solar-panels1.jpg"},
+            "utility": {"name": "Utility Solar", "desc":"With a utility level system, save even more on your bills, reduce lots of your carbon footprint and maybe increase the value of your home", "price":75350, "img":"img/solar-panels2.jpg"},
+            "commercial": {"name": "Commercial Solar", "desc":"Our most power system, the Commerical level solar, electricity savings are best, carbon footprint reduces to EU42.5 and value of your home will break through roof", "price":1500595, "img":"img/solar-panels3.jpg"}
         };
+
+        // Close modals if page was refreshed
+        // -this prevents form fields reverting to default values
+        if(performance.navigation.type == performance.navigation.TYPE_RELOAD){
+            location.href="";
+        }
         var openLoginModal = document.getElementById("btnLogin");
         openLoginModal.addEventListener('click', function(){
             location.href="#modalLogin";
@@ -159,28 +168,36 @@
             });
         }
 
-        var globalProductName = "";
+        var globalProductName;
         var moreInfoBtns = document.getElementsByClassName("btnMore");
         for(var i=0; i<moreInfoBtns.length; i++){
             moreInfoBtns[i].addEventListener('click', function(){
                 globalProductName = this.value;
+                window.sessionStorage.setItem('globalProductName', this.value);
                 location.href="#modalCart";
+                document.getElementById("product-img").src = productList[this.value].img;
                 document.getElementById("product-name").textContent = productList[this.value].name;
                 document.getElementById("product-desc").textContent = productList[this.value].desc;
                 document.getElementById("product-price").textContent = currencyFormatter.format(productList[this.value].price);
                 var productTotal = document.getElementById("product-total");
-                productTotal.value = currencyFormatter.format(productQuantity.value * productList[globalProductName].price);
+                productTotal.value = currencyFormatter.format(productQuantity.value * productList[sessionStorage.getItem('globalProductName')].price);
 
             });
         }
 
         var productQuantity = document.getElementById("product-quantity");
+        var productTotal = document.getElementById("product-total");
         productQuantity.addEventListener('change', function(){
             // alert(`Quantity selected: ${productQuantity.value} and product name is ${globalProductName}`);
-            var productTotal = document.getElementById("product-total");
-            productTotal.value = currencyFormatter.format(productQuantity.value * productList[globalProductName].price);
+            // alert(`Quantity selected: ${productQuantity.value} and product name is (session) ${sessionStorage.getItem('globalProductName')}`);
+            productTotal.value = currencyFormatter.format(productQuantity.value * productList[sessionStorage.getItem('globalProductName')].price);
         });
 
+        let productAdd = document.getElementById("product-add");
+        productAdd.addEventListener('click', function(){
+            let orderSummary = document.getElementById("order-summary");
+            orderSummary.textContent = `Added ${productQuantity.value} unit(s) of ${sessionStorage.getItem('globalProductName')} for a total of ${productTotal.value} to your cart`;
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

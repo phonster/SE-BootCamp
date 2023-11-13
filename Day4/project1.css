@@ -130,7 +130,9 @@ img.cart-size{
     padding-right: .7em;
     padding-left: .7em;
     border-radius: .2em;
-    background-color: #739393;
+    /* background-color: #739393; */
+    /* background-color: #25323c; */
+    background-color: #537373;
     color: white;
 }
 #btnLogin{

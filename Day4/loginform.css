@@ -168,7 +168,12 @@ input[type=text]{
     grid-template-areas:
         'img detail detail'
         'cart cart cart'
+        'summary summary summary'
         'foot foot foot'
+}
+.grid-summary{
+    grid-area: summary;
+    text-align: center;
 }
 .grid-img {
     grid-area: img;
