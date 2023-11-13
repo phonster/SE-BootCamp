@@ -1,0 +1,44 @@
+body{background-color: aquamarine;}
+
+/* .parentbox
+{ */
+/* display: flex;
+flex-wrap: wrap; */
+
+/* display: grid;
+grid-template-columns: 1fr 1fr; */
+/* } */
+
+/* @media screen and(min-width:600px){
+    
+} */
+
+
+.mdl{
+    background-color: rgba(43, 40, 38, 0.8);
+    position: fixed;
+    /* left:0; */
+    left:0;
+    bottom:0;
+    top:0;
+    right:0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mdl:target{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.mdl>div{
+    background-color: aliceblue;
+    width:80%;
+    margin: auto;
+    /* transform: ; */
+    margin-top:30%;
+}
+
+section>div>img{  
+    width:50%;
+}
