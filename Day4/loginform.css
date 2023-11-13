@@ -100,6 +100,20 @@ div.form-container{
     margin: auto;
     min-width: 600px;
 }
+.flex-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: #25323c;
+    color: #ffffff;
+    padding: 3em;
+    border-radius: 6px;
+    overflow: hidden;
+    overflow: auto;
+    width: 500px;
+    margin: auto;
+    min-width: 600px;
+}
 .green-button{
     background-color: #36a984;
 }
@@ -146,4 +160,40 @@ input[type=text]{
 }
 .closeBtn:hover{
     cursor: pointer;
+}
+
+.grid-orderform {
+    display: grid;
+    row-gap: 20px;
+    grid-template-areas:
+        'img detail detail'
+        'cart cart cart'
+        'foot foot foot'
+}
+.grid-img {
+    grid-area: img;
+}
+.grid-detail{
+    grid-area: detail;
+}
+.grid-cart{
+    grid-area: cart;
+}
+
+.grid-cart-controls{
+    display: grid;
+    row-gap: 20px;
+    grid-template-areas:
+        'quantity total addtocart'
+}
+.grid-quantity{
+    grid-area: quantity;
+    padding-right: 1em;
+}
+.grid-total{
+    grid-area: total;
+}
+.grid-addtocart{
+    grid-area: addtocart;
+    padding-left: 1em;
 }

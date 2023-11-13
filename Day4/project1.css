@@ -63,7 +63,7 @@ section{
     width: 100%;
 }
 img.cart-size{
-    width: 50%;
+    width: 100%;
 }
 .col3-content{
     padding-top: 5px;
@@ -117,6 +117,9 @@ img.cart-size{
     margin: auto;
     margin-top:5%;
 }
+/*
+    !! Check if we still need .mdl-cart > div
+*/
 .mdl-cart > div{
     width:25%;
     margin: auto;
