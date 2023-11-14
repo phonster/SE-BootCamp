@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2 QBCC Software Development</title>
+    <style>
+        blockquote {
+            font-style: italic;
+            font-family: monospace;
+            font-size: .7em;
+        }
+
+        blockquote::before {
+            content: " - ";
+        }
+
+        .colorBox {
+            background: #111;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            position: relative;
+            color: #ffffff;
+            font-family: monospace;
+        }
+
+        .colorBox:before {
+            content: "";
+            background: linear-gradient(130deg, #ff7a18, #af002d 41.07%, #319197 76.05%);
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            width: calc(100% + 10px);
+            height: calc(100% + 10px);
+            z-index: -1;
+            border-radius: 12px;
+        }
+        #gibberish p{
+            font-size: 1.4em;
+            margin: 5em;
+        }
+        .circular{
+            border-radius: 50%;
+            border: 4px solid #f05656;
+        }
+        .circular img{
+            opacity: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>This is a Big Heading</h1>
+        <img class="circular" src="./img/solar-panels1.jpg" width="200" height="200" alt="solar panels">
+        <blockquote cite="https://wikipedia.org">
+            Solar panels are really cool
+        </blockquote>
+    </section>
+
+    <section id="gradient">
+        <div class="colorBox">I hope I can create a colorful border</div>
+    </section>
+    <section id="gibberish">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae error et cum at suscipit aperiam numquam, obcaecati molestias qui beatae autem explicabo illo vitae omnis delectus animi! Perspiciatis, odit totam?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae error et cum at suscipit aperiam numquam, obcaecati molestias qui beatae autem explicabo illo vitae omnis delectus animi! Perspiciatis, odit totam?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae error et cum at suscipit aperiam numquam, obcaecati molestias qui beatae autem explicabo illo vitae omnis delectus animi! Perspiciatis, odit totam?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae error et cum at suscipit aperiam numquam, obcaecati molestias qui beatae autem explicabo illo vitae omnis delectus animi! Perspiciatis, odit totam?</p>
+    </section>
+</body>
+
+</html>
