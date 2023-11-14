@@ -171,6 +171,21 @@ input[type=text]{
         'summary summary summary'
         'foot foot foot'
 }
+@media (max-width: 600px) {
+    .grid-orderform {
+        display: block;
+    }
+    .flex-container{
+        width: 400px;
+        margin: auto;
+        min-width: 400px;
+    }
+    div.input-group{
+        margin: 0;
+        padding: 0;
+    }
+
+}
 .grid-summary{
     grid-area: summary;
     text-align: center;
@@ -191,6 +206,18 @@ input[type=text]{
     grid-template-areas:
         'quantity total addtocart'
 }
+@media (max-width: 600px) {
+    .grid-cart-controls {
+        display: block;
+    }
+    .grid-cart-controls > div > input, select, button{
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+    }
+}
 .grid-quantity{
     grid-area: quantity;
     padding-right: 1em;
@@ -201,4 +228,13 @@ input[type=text]{
 .grid-addtocart{
     grid-area: addtocart;
     padding-left: 1em;
+    margin: auto;
+}
+#product-add{
+    color: white; 
+    float: right;
+}
+.hicontrast-elem{
+    color: white; 
+    background-color: transparent;
 }
