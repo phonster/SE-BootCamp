@@ -1,0 +1,79 @@
+body{
+    font-family: monospace;
+}
+.niceParagraph{
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #4589f2;
+}
+table{
+    width: 100%;
+}
+table, th, td {
+    border: 1px dotted #cecece;
+    padding: 2em;
+}
+footer{
+    text-align: center;
+    padding: 3em;
+    background-color: #112211;
+    color: rgb(233, 225, 178);
+    font-weight: 600;
+}
+
+/* Day7: Mapping array info to components*/
+/* nav>ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav>ul>li{
+    display: inline;
+    padding-right: 1em;
+    font-weight: 600;
+}
+nav{
+    display: flex;
+    background-color: rgb(91, 105, 129);
+    padding: 25px;
+    box-shadow: inset 0px 2px 5px rgb(33,33,33,75);
+    justify-content: flex-end;
+}
+
+nav > ul{
+    float: right;
+}
+nav > ul > li > a{
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+nav > ul > li > a:link, nav > ul > li > a:visited {
+    color: lightgrey;
+    font-weight: bold;
+    text-decoration: none;
+}
+nav > ul > li > a:hover{
+    color: white;
+    background-color: grey;
+}
+nav > ul > li > a:active{
+    color: rgb(130, 13, 13);
+    background-color: grey;
+}
+.fa-icon-color{
+    color: red;
+    font-size: 2em;
+}
+#loginBtn a{
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: white;
+    background-color: rgb(32, 31, 31);
+}
+#loginBtn a:hover{
+    font-weight: 700;
+    background-color: rgb(211, 21, 21);
+} */
