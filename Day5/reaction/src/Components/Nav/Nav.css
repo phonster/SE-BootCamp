@@ -1,0 +1,55 @@
+nav>ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav>ul>li{
+    display: inline;
+    padding-right: 1em;
+    font-weight: 600;
+}
+nav{
+    display: flex;
+    background-color: rgb(91, 105, 129);
+    padding: 25px;
+    box-shadow: inset 0px 2px 5px rgb(33,33,33,75);
+    justify-content: flex-end;
+}
+nav > ul{
+    float: right;
+}
+nav > ul > li > a{
+    /* Give each link a larger box area for background color to change when hover */
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+nav > ul > li > a:link, nav > ul > li > a:visited {
+    color: lightgrey;
+    font-weight: bold;
+    text-decoration: none;
+}
+nav > ul > li > a:hover{
+    color: white;
+    background-color: grey;
+}
+nav > ul > li > a:active{
+    color: rgb(130, 13, 13);
+    background-color: grey;
+}
+.fa-icon-color{
+    color: red;
+    font-size: 2em;
+}
+#loginBtn a{
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: black;
+    background-color: darkorange;
+}
+#loginBtn a:hover{
+    font-weight: 700;
+    background-color: rgb(211, 21, 21);
+}

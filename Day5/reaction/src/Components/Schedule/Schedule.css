@@ -1,0 +1,23 @@
+#scheduleTable {
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#scheduleTable>th,td {
+    border: 0px dotted #b78b8b;
+    padding: 1.75em;
+    background-color: rgb(186, 186, 159);
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+#scheduleTable>thead>th {
+    font-size: 1.25em;
+    font-weight: 800;
+    text-align: left;
+}
+
+#scheduleTable>thead {
+    color: white;
+    background-color: rgb(51, 55, 73);
+}

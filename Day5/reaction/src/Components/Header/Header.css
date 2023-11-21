@@ -1,0 +1,26 @@
+header{
+    display: flex;
+    justify-content: center;
+    padding: 4em;
+    background-color: rgb(195, 220, 10);
+}
+.fa-header{
+    font-size: 1.5em;
+    padding-left: .25em;
+    padding-right: .25em;
+}
+.fa-check{
+    color: green;
+}
+.fa-x{
+    color: red;
+}
+.continueBtn {
+    width: '250px';
+    padding: 20px;
+    background-color: 'steelblue';
+    color: 'white';
+    font-weight: 600;
+    border-radius: 10px;
+    margin: '10px'
+}

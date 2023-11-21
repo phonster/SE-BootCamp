@@ -1,0 +1,29 @@
+.icon-button{
+    font-size: 4em;
+    border-radius: 50%;
+    border: 10px solid rgb(25, 72, 110);
+    padding: 20px;
+    color: rgb(25, 72, 110);
+}
+
+.serviceCard{
+    overflow: hidden;
+    width: 27.33%;
+    padding: 25px;
+    text-align: center;
+    margin: 5px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: rgb(203, 232, 241);
+    border-radius: 10px;
+    font-size: 1.25em;
+}
+@media (max-width: 600px) {
+    .serviceCard{
+        width: 90%;
+        background-color: pink;
+    }
+    #serviceSection{
+        display: grid;
+    }    
+}
