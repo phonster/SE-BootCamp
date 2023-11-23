@@ -1,7 +1,5 @@
 import React from "react";
 import Services from "./Services";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faCaravan, faClock, faPaperPlane, faBars, faRobot } from '@fortawesome/free-solid-svg-icons'
 import './ThreeOne.css';
 
 function ServiceCard(props){

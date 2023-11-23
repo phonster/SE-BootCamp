@@ -1,32 +1,19 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faRobot } from '@fortawesome/free-solid-svg-icons'
-
+import './App.css';
+import HeaderState from './Components/HeaderState/HeaderState';
+import FourByOne from './Components/FourByOne/FourByOne';
+import Nav from './Components/Nav/Nav';
+import Footer from './Components/Footer/Footer';
+import Schedule from './Components/Schedule/Schedule';
+  
 function App2() {
   return (
-    <div style={{width: '100%'}}>
-      <FontAwesomeIcon icon={faRobot} className="fa-icon-color" />
-    </div>);
+    <div>
+      <HeaderState />
+      <Nav />
+      <FourByOne />
+      <Schedule />
+      <Footer />
+    </div>
+  );
 }
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
 export default App2;

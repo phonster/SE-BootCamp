@@ -6,7 +6,7 @@ import './Footer.css';
 function Footer() {
   return (
     <footer>
-      <p>&copy; 2023 <FontAwesomeIcon icon={faRobot} className={'logo-icon'}/>This footer contains no arms</p>
+      <p>&copy; 2023 Phonster <FontAwesomeIcon icon={faRobot} className={'logo-icon'}/>This footer contains no arms</p>
     </footer>
   );
 }

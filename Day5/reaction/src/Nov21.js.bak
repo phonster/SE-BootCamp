@@ -1,0 +1,73 @@
+import React, {useState} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faRobot } from '@fortawesome/free-solid-svg-icons'
+
+function Nov21() {
+  const [myName, setName] = useState("No Name");
+  const [theTime, setTime] = useState(new Date().getTime());
+  const [myCounter, setCounter] = useState(0);
+
+  function decrementCounter(){
+    if(myCounter == 0){
+      return;
+    }
+    else{
+      setCounter(myCounter - 1);
+    }
+  }
+  
+  function generateRandomName(){
+    if(myName != ""){
+      let newName = myName.slice(1,myName.length);
+      setName(newName);
+    }
+    else{
+      setName('Peter McDonald');
+    }
+  }
+
+  // setTimeout(setTime(new Date().toLocaleTimeString()), 5000);
+  setInterval(()=>{setTime(new Date().toLocaleTimeString())}, 1000);
+
+  return (
+    <div style={{ width: '90%' }}>
+      <FontAwesomeIcon icon={faRobot} className="fa-icon-color" />
+      <section style={{padding: '2em', backgroundColor: 'lightblue', border: '6px dotted blue;' }}>
+        <h1>{theTime}</h1>
+        <button onClick={()=>{setTime(new Date().toLocaleTimeString())}}>Update Time</button>
+      </section>
+      <section style={{padding: '2em', backgroundColor: 'pink', border: '12px dotted red;' }}>
+        <h2>{myName}</h2>
+        <button onClick={generateRandomName}>Generate a Name</button>
+      </section>
+      <section style={{padding: '2em', backgroundColor: 'lightgreen', border: '12px dotted red;' }}>
+        <h3>{myCounter}</h3>
+        <button onClick={()=>{setCounter(myCounter + 1)}}>+</button>
+        <button onClick={decrementCounter}>-</button>
+      </section>
+    </div>
+  );
+}
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <p>
+//           Edit <code>src/App.js</code> and save to reload.
+//         </p>
+//         <a
+//           className="App-link"
+//           href="https://reactjs.org"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//           Learn React
+//         </a>
+//       </header>
+//     </div>
+//   );
+// }
+
+export default Nov21;

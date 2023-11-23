@@ -13,13 +13,13 @@ table, th, td {
     border: 1px dotted #cecece;
     padding: 2em;
 }
-footer{
+/* footer{
     text-align: center;
     padding: 3em;
     background-color: #112211;
     color: rgb(233, 225, 178);
     font-weight: 600;
-}
+} */
 
 /* Day7: Mapping array info to components*/
 /* nav>ul {
