@@ -42,14 +42,228 @@ nav > ul > li > a:active{
     color: red;
     font-size: 2em;
 }
-#loginBtn a{
+#loginBtn a, button{
     padding: 10px 20px 10px 20px;
     border-radius: 5px;
     text-transform: uppercase;
     color: black;
     background-color: darkorange;
+    border: 0px;
+    font-weight: 700;
 }
-#loginBtn a:hover{
+#loginBtn a:hover, button:hover{
     font-weight: 700;
     background-color: rgb(211, 21, 21);
+}
+
+.mdl{
+    background-color: rgba(43, 40, 38, 0.8);
+    position: fixed;
+    /* left, bottom, top, right only applies if position is specified */
+    left:0;
+    bottom:0;
+    top:0;
+    right:0;
+    opacity: 0; /* opacity 0 = transparent (why not use display: none or visibility: hidden) */
+    pointer-events: none;
+}
+
+.modalHide{
+    position: fixed;
+    /* left, bottom, top, right only applies if position is specified */
+    left:0;
+    bottom:0;
+    top:0;
+    right:0;
+    opacity: 0; /* opacity 0 = transparent (why not use display: none or visibility: hidden) */
+    pointer-events: none;
+}
+
+.modalShow{
+    background-color: rgba(43, 40, 38, 0.8);
+    position: fixed;
+    /* left, bottom, top, right only applies if position is specified */
+    left:0;
+    bottom:0;
+    top:0;
+    right:0;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.mdl:target{
+    opacity: 1;
+    pointer-events: all;
+}
+.mdl > div{
+    width: 50%;
+    margin: auto;
+    margin-top:5%;
+}
+.grid-2-nogap {
+    column-gap: 0;
+}
+
+.grid-colspan2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.grid-form {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 20px;
+    grid-template-areas:
+        'signup login'
+        'free free'
+        'firstname lastname'
+        'email email'
+        'pw pw'
+        'start start'
+        'foot foot'
+}
+
+.grid-itm1 {
+    grid-area: signup;
+    margin-right: -5px
+}
+
+.grid-itm2 {
+    grid-area: login;
+    margin-left: -5px
+}
+
+.grid-itm3 {
+    grid-area: firstname;
+}
+
+.grid-itm4 {
+    grid-area: lastname;
+}
+
+.grid-itm5 {
+    grid-area: email;
+}
+
+.grid-itm6 {
+    grid-area: pw;
+}
+
+.grid-itm7 {
+    grid-area: start;
+}
+.grid-itm7 input{
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.grid-itm8{
+    grid-area: free;
+    justify-content: center;
+    font-size: 1.4em;
+}
+.grid-foot{
+    grid-area: foot;
+    justify-content: center;
+    color: #36a984;
+    font-family: monospace;
+    font-size: 1em;
+    font-weight: bold;
+    padding-top: 2em;
+}
+.fill-space {
+    display: flex;
+    flex-direction: row;
+}
+
+.fill-space input {
+    flex: 1;
+    min-width: auto;
+}
+
+.grid-form input {
+    padding: 1em;
+}
+.grid-form > input::placeholder{
+    color: #cacaca;
+    font-weight: 300;
+    font-size: 1.25em;
+    opacity: 50%;
+}
+div.form-container{
+    display: block;
+    background-color: #25323c;
+    color: #ffffff;
+    padding: 3em;
+    border-radius: 6px;
+    overflow: hidden;
+    overflow: auto;
+    width: 500px;
+    margin: auto;
+    min-width: 600px;
+    margin-top: 2%;
+}
+.flex-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: #25323c;
+    color: #ffffff;
+    padding: 3em;
+    border-radius: 6px;
+    overflow: hidden;
+    overflow: auto;
+    width: 500px;
+    margin: auto;
+    min-width: 600px;
+}
+.green-x{
+    color: #36a984;
+}
+.green-button{
+    background-color: #36a984;
+}
+.grid-form > input[type=button]{
+    color: #ffffff;
+    border: 2px inset transparent;
+}
+.grid-form > input[type=button]:hover{
+    filter: brightness(110%);
+}
+.grid-form > input[type=button]:active{
+    border-top: 2px inset white;
+    border-left: 2px inset white;
+    border-right: 2px inset black;
+    border-bottom: 2px inset black;
+    transform: translate(1px 1px);
+}
+
+.grid-form > input[type=button].off-button{
+    background-color: #2c2a2a;
+    color: #cecece;
+}
+.grid-form > input[type=text]{
+    background: transparent;
+    border: 1px solid #969595;
+}
+@media (max-width: 600px) {
+    .grid-form {
+        display: block;
+        width: 300px;
+    }
+    .grid-form div{
+        margin: 5px;
+    }
+    div.form-container{
+        width: 90%;
+        min-width: 90%;
+    }
+}
+.closeBtn{
+    display: flex; 
+    justify-content: right;
+    padding-bottom: 2em;
+}
+.closeBtn:hover{
+    cursor: pointer;
 }

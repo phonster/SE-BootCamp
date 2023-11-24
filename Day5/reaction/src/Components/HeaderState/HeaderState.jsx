@@ -69,11 +69,11 @@ function HeaderState(){
         if(isNumber(userBirthYear)){
             if (0 < userAge && userAge < 125){
                 if (userAge > minDriverAge) {
-                    msgText = <span style={{ display: 'flex', alignItems: 'center' }}><FontAwesomeIcon icon={faCircleCheck} className={'fa-header fa-check'} />
+                    msgText = <span style={{ display: 'flex', alignItems: 'center' }}><FontAwesomeIcon icon={faCircleCheck} className='fa-header fa-check' />
                         <p>Congrats, you can apply for a drivers license at age {userAge}</p></span>
                 }
                 else if (userAge > 10) {
-                    msgText = <span style={{ display: 'flex', alignItems: 'center' }}><FontAwesomeIcon icon={faCircleXmark} className={'fa-header fa-x'} />
+                    msgText = <span style={{ display: 'flex', alignItems: 'center' }}><FontAwesomeIcon icon={faCircleXmark} className='fa-header fa-x' />
                         <p>Sorry, you can't apply for license until you're over {minDriverAge}</p></span>
                 }
                 else {
@@ -94,8 +94,8 @@ function HeaderState(){
             <div style={{border: '1xp solid red', display: 'block', justifyContent: 'flex-start', alignContent: 'center', alignItems: 'center'}}>
                 <h2>{msgEligible}</h2>
                 <div style={{display: 'flex'}}>
-                    <input id={'birthYear'} type={'text'} style={{width: 50, height:'2em', marginLeft: '1em'}}/>
-                    <button style={{marginLeft: '5px', color: 'white', backgroundColor: 'red', border: '0px', borderRadius: '.5em', height:'2.5em', fontWeight: '600'}} onClick={checkEligibility}>Check Eligibility</button>
+                    <input id={'birthYear'} type='number' style={{width: 60, height:'2em', marginLeft: '1em', backgroundColor: 'white', border: '1px dotted black'}}/>
+                    <button style={{paddingLeft: '1em', paddingRight: '1em', marginLeft: '5px', color: 'white', backgroundColor: 'olive', border: '0px', borderRadius: '.25em', height:'2.25em', fontWeight: '600'}} onClick={checkEligibility}>Check Eligibility</button>
                 </div>
             </div>
         </header>);
