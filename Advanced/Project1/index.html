@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCC ADV Software Development - Assignment 1</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body>
+    <section id="hero" aria-label="Cycling into sunrise - handlebar point of view" title="Cycling into sunrise - handlebar point of view">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand nav" href="#">
+                    <svg width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fa5e5e" d="M156.6 384.9L125.7 354c-8.5-8.5-11.5-20.8-7.7-32.2c3-8.9 7-20.5 11.8-33.8L24 288c-8.6 0-16.6-4.6-20.9-12.1s-4.2-16.7 .2-24.1l52.5-88.5c13-21.9 36.5-35.3 61.9-35.3l82.3 0c2.4-4 4.8-7.7 7.2-11.3C289.1-4.1 411.1-8.1 483.9 5.3c11.6 2.1 20.6 11.2 22.8 22.8c13.4 72.9 9.3 194.8-111.4 276.7c-3.5 2.4-7.3 4.8-11.3 7.2l0 82.3c0 25.4-13.4 49-35.3 61.9l-88.5 52.5c-7.4 4.4-16.6 4.5-24.1 .2s-12.1-12.2-12.1-20.9l0-107.2c-14.1 4.9-26.4 8.9-35.7 11.9c-11.2 3.6-23.4 .5-31.8-7.8zM384 168a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
+                    <span class="nav" style="padding-left: 10px; color: #fa5e5e">Studio</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                    </ul>
+                    <span class="navbar-text">
+                        <button class="login-button" title="Login to Studio" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                    </span>
+                </div>
+            </div>
+        </nav>
+        <!--nav id="navi">
+            Studio
+            <span>
+                <button class="login-button" title="Login to Studio" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+            </span>
+        </nav-->
+        <div class="hero-text">
+            <p class="mini-cap-title">
+                We play hard. And then We play hard
+            </p>
+            <h1>
+                We&nbsp;Ride<br>Nice&nbsp;Bicycles
+            </h1>
+        </div>
+    </section>
+    <section class="my-row">
+        <div class="info-box">
+            <img src="img/AdobeStock_141353871.jpeg" alt="Mountain biking on a mountain">
+            <h4>Mountain Biking</h4>
+            <h6>Adirondacks - $450</h6>
+            <p class="col3-content">Sign up for our exhilarating mountain biking tour to explore breathtaking trails and experience the thrill of the outdoors. Whether you're a seasoned rider or a beginner, our guided tours offer a perfect blend of adventure and scenic beauty.</p>
+                <button class="btn red-button" data-bs-toggle="modal" data-bs-target="#mountainModal">Mountain</button>
+        </div>
+        <div class="info-box">
+            <img src="img/nice-bike-path.jpg" alt="A nice trail with wood fence">
+            <h4>Empire State Trail</h4>
+            <h6>Lower Hudson Valley - $200</h6>
+            <p class="col3-content">Join us for a scenic ride on the Empire State Bike Trail, where you'll pedal through some of New York's most stunning landscapes. Sign up today to embark on a memorable journey, perfect for cyclists of all levels.</p>
+            <button class="red-button" data-bs-toggle="modal" data-bs-target="#trailModal">Trail</button>
+        </div>
+        <div class="info-box">
+            <img src="img/OIP.jpg" alt="Road bike on some tarmac">
+            <h4>Road Cycling</h4>
+            <h6>New Paltz - $525</h6>
+            <p class="col3-content">Sign up for a road bike ride in New Paltz and experience the beauty of the Shawangunk Mountains and surrounding countryside. Whether you're a seasoned cyclist or just looking for a scenic adventure, this ride offers the perfect mix of challenge and breathtaking views.</p>
+                <button title="Go ahead, click me" class="red-button" data-bs-toggle="modal" data-bs-target="#roadModal">Road</button>
+            </div>
+    </section>
+
+  
+    <!-- Modal Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-box">
+            <div class="modal-content modal-box">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Join Us</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body modal-box">
+                    <div class="container modal-box">
+                        <div class="row g-0 modal-box">
+                            <div class="col-sm-6 col-12">
+                                <div class="p-0 d-grid">
+                                    <button class="btn rounded-0 text-bg-success">Sign Up</button>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-12">
+                                <div class="p-0 d-grid">
+                                    <button class="btn btn-secondary rounded-0">Log In</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-0 modal-box">
+                            <!-- Full-width row spanning both columns -->
+                            <div class="col-12">
+                                <div class="p-1 text-white text-center">
+                                    <h2>Sign Up for Free</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-1 ph-input-row modal-box">
+                            <div class="col-sm-6 col-12">
+                                <div class="p-1 input-group">
+                                    <input type="text" id="first_name" name="last_name"
+                                        class="form-control rounded-0 ph-grey-placeholder ph-tr-input"
+                                        placeholder="First Name*">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-12">
+                                <div class="p-1 input-group">
+                                    <input type="text" id="last_name" name="last_name"
+                                        class="form-control rounded-0 ph-grey-placeholder ph-tr-input"
+                                        placeholder="Last Name*">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-md-4 mt-1 ph-input-row modal-box">
+                            <div class="col-12">
+                                <div class="p-1 input-group">
+                                    <input type="text" id="email_address" name="email_address"
+                                        class="form-control rounded-0 ph-grey-placeholder ph-tr-input"
+                                        placeholder="Email Address*">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-md-4 mt-1 ph-input-row modal-box">
+                            <div class="col-12">
+                                <div class="p-1 input-group">
+                                    <input type="text" id="password" name="password"
+                                        class="form-control rounded-0 ph-grey-placeholder ph-tr-input"
+                                        placeholder="Set A Password*">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-0 modal-box">
+                            <div class="col-12">
+                                <div class="p-0 mt-4 d-grid text-center">
+                                    <button class="btn btn-lg rounded-0 text-bg-success fw-bold ph-wide-kern">GET
+                                        STARTED</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Mountain -->
+    <div class="modal fade" id="mountainModal" tabindex="-1" aria-labelledby="mountainModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="mountainModalLabel">Register for this Ride</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body ph-tab-bkgrd">
+                <div class="info-box">
+                    <img src="img/AdobeStock_141353871.jpeg" alt="Mountain biking on a mountain">
+                    <h4>Mountain Biking</h4>
+                    <h6>Adirondacks - $450</h6>
+                    <p class="col3-content">Sign up for our exhilarating mountain biking tour to explore breathtaking trails and experience the thrill of the outdoors. Whether you're a seasoned rider or a beginner, our guided tours offer a perfect blend of adventure and scenic beauty.</p>
+                    <form class="form-inline" style="margin-top:10px; width:75%">
+                        <div class="row" style="border-radius: 8px">
+                            <div class="col text-right">
+                                <label for="pplCountMtn">Riders</label>
+                            </div>
+                            <div class="col">
+                                <input type="number" id="pplCountMtn" class="form-control form-control-sm" min="1" max="5" value="1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-right">
+                                <label for="totalMtn">Total</label>
+                            </div>
+                            <div class="col">
+                                <input readonly type="text" id="totalMtn" class="form-control form-control-sm">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="collapse" id="collapseMtn">
+                    <div class="card card-body" id="confirmMtn">
+                      Cart confirmation
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" href="#collapseMtn">Add to Cart</button>
+            </div>
+        </div>
+        </div>
+    </div>
+  
+    <!-- Modal Trail -->
+    <div class="modal fade" id="trailModal" tabindex="-1" aria-labelledby="trailModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="trailModalLabel">Register for this Ride</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body ph-tab-bkgrd">
+                <div class="info-box">
+                    <img src="img/nice-bike-path.jpg" alt="Trail riding on Empire State Bike trail">
+                    <h4>Empire State Trail</h4>
+                    <h6>Lower Hudson Valley - $200</h6>
+                    <p class="col3-content">Join us for a scenic ride on the Empire State Bike Trail, where you'll pedal through some of New York's most stunning landscapes. Sign up today to embark on a memorable journey, perfect for cyclists of all levels.</p>
+                    <form class="form-inline" style="margin-top:10px; width:75%">
+                        <div class="row" style="border-radius: 8px">
+                            <div class="col text-right">
+                                <label for="pplCountTrail">Riders</label>
+                            </div>
+                            <div class="col">
+                                <input type="number" id="pplCountTrail" class="form-control form-control-sm" min="1" max="5" value="1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-right">
+                                <label for="totalTrail">Total</label>
+                            </div>
+                            <div class="col">
+                                <input readonly type="text" id="totalTrail" class="form-control form-control-sm">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="collapse" id="collapseTrail">
+                    <div class="card card-body" id="confirmTrail">
+                      Cart confirmation
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" href="#collapseTrail">Add to Cart</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Road -->
+    <div class="modal fade" id="roadModal" tabindex="-1" aria-labelledby="roadModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="roadModalLabel">Register for this Ride</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body ph-tab-bkgrd">
+                <div class="info-box">
+                    <img src="img/OIP.jpg" alt="Road riding in New Paltz">
+                    <h4>Road Cycling</h4>
+                    <h6>New Paltz - $525</h6>
+                    <p class="col3-content">Sign up for a road bike ride in New Paltz and experience the beauty of the Shawangunk Mountains and surrounding countryside. Whether you're a seasoned cyclist or just looking for a scenic adventure, this ride offers the perfect mix of challenge and breathtaking views.</p>
+                    <form class="form-inline" style="margin-top:10px; width:75%">
+                        <div class="row" style="border-radius: 8px">
+                            <div class="col text-right">
+                                <label for="pplCountRoad">Riders</label>
+                            </div>
+                            <div class="col">
+                                <input type="number" id="pplCountRoad" class="form-control form-control-sm" min="1" max="5" value="1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-right">
+                                <label for="totalRoad">Total</label>
+                            </div>
+                            <div class="col">
+                                <input readonly type="text" id="totalRoad" class="form-control form-control-sm">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="collapse" id="collapseRoad">
+                    <div class="card card-body" id="confirmRoad">
+                        Cart confirmation
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" href="#collapseRoad">Add to Cart</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $("document").ready(function(){
+            const mtnct = $("#pplCountMtn");
+            const mtnttl = $("#totalMtn");
+            const mtncost = 450;
+            const mtnconfirm = $("#confirmMtn");
+            const mtncolps = $("#collapseMtn");
+            mtnct.on("click", () => {
+                mtnttl.val(`$${mtnct.val() * mtncost}`); 
+                if(mtncolps.hasClass('show')){
+                    mtncolps.collapse('toggle');
+                }
+                mtnconfirm.text(`Added ${mtnct.val()} tickets to your cart for a total cost of ${mtnttl.val()}. You can close this window.`);
+            });
+
+            const trailct = $("#pplCountTrail");
+            const trailttl = $("#totalTrail");
+            const trailcost = 200;
+            const trailconfirm = $("#confirmTrail");
+            const trailcolps = $("#collapseTrail");
+            trailct.on("click", () => {
+                trailttl.val(`$${trailct.val() * trailcost}`); 
+
+                if(trailcolps.hasClass('show')){
+                    trailcolps.collapse('toggle');
+                }
+                trailconfirm.text(`Added ${trailct.val()} tickets to your cart for a total cost of ${trailttl.val()}. You can close this window.`);
+            });
+            
+            const roadct = $("#pplCountRoad");
+            const roadttl = $("#totalRoad");
+            const roadcost = 525;
+            const roadconfirm = $("#confirmRoad");
+            const roadcolps = $("#collapseRoad");
+            roadct.on("click", () => {
+                roadttl.val(`$${roadct.val() * roadcost}`); 
+
+                if(roadcolps.hasClass('show')){
+                    roadcolps.collapse('toggle');
+                }
+                roadconfirm.text(`Added ${roadct.val()} tickets to your cart for a total cost of ${roadttl.val()}. You can close this window.`);
+            });
+        });
+    </script>
+    <script src="script-disabled.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+</html>
