@@ -3,7 +3,7 @@ body{
     padding: 0px;
 }
 #hero{
-    background-image: url("img/20240719SJsub.webp");
+    background-image: url("./img/20240719SJsub.webp");
     background-size:cover;
     background-repeat: no-repeat;
     width: 100%;
