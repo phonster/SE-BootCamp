@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "BooBoo",
+    "type": "Dog",
+    "age": 5
+  },
+  {
+    "id": 2,
+    "name": "DooBoo",
+    "type": "Cat",
+    "age": 3
+  },
+  {
+    "id": 3,
+    "name": "PooBoo",
+    "type": "Hamster",
+    "age": 4
+  },
+  {
+    "id": 4,
+    "name": "Jessica123",
+    "type": "human",
+    "age": 1043
+  },
+  {
+    "id": 5,
+    "name": "Jessadfa123",
+    "type": "humanfgjhy",
+    "age": 1043657
+  },
+  {
+    "id": 6,
+    "name": "Jessadfa123",
+    "type": "humanfgjhy",
+    "age": 1043657
+  }
+]
